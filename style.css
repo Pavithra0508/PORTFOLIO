@@ -79,11 +79,11 @@ a {
 }
 
 /* =====================
-   FORCE ALL HEADINGS WHITE
 ===================== */
+/* Global headings – default white, except where overridden */
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
-    text-align: center; /* Center all headings */
+    text-align: center;
 }
 
 /* =====================
@@ -170,8 +170,9 @@ section p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Project titles should be black */
 .project h3 {
-  color: #000 !important;
+    color: #000;
 }
 
 .project p {
