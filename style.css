@@ -79,6 +79,13 @@ a {
 }
 
 /* =====================
+   HEADINGS - ALL WHITE
+===================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light);
+}
+
+/* =====================
    HERO SECTION
 ===================== */
 header {
@@ -104,11 +111,6 @@ header p {
 section {
   padding: 4rem 2rem;
   text-align: center;  /* 🔥 Force center */
-}
-
-section h2,
-section p {
-  text-align: center;  /* 🔥 Double safety */
 }
 
 section p {
@@ -168,7 +170,7 @@ section p {
 }
 
 .project h3 {
-  color: var(--text-dark);
+  color: var(--text-light); /* Updated to white */
 }
 
 .project p {
