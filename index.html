@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pavithra C | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Pavithra C</div>
 
@@ -27,17 +27,21 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <header id="home">
     <h1>Welcome to My Portfolio</h1>
     <p>Web Developer | Data Analyst | Programmer</p>
   </header>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
+
     <div class="about-content">
-      <img src="images/profile.jpg" alt="Pavithra C">
+      <div class="image-wrapper">
+        <img src="images/profile.jpg" alt="Pavithra C">
+      </div>
+
       <p>
         Hi! I'm a web developer who loves turning ideas into clean, responsive websites.
         I enjoy learning new technologies every day and exploring data analysis and AI.
@@ -46,7 +50,7 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- SKILLS -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -61,40 +65,28 @@
     </ul>
   </section>
 
-  <!-- Projects Section -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
       <h3>Excel to UI Dashboard</h3>
-      <p>
-        Developed an interactive web-based dashboard that converts Excel data into
-        a clean, user-friendly interface for better decision-making.
-      </p>
-      <video controls class="project-video">
-        <source src="videos/video1.mp4" type="video/mp4">
-      </video>
+      <p>Interactive dashboard converting Excel data into clean UI.</p>
     </div>
 
     <div class="project">
       <h3>Android Malware Detection</h3>
-      <p>
-        Built an ML-based system to detect malicious Android apps using
-        Random Forest, KNN, and SVM models.
-      </p>
-      <video controls class="project-video">
-        <source src="videos/videoo.mp4" type="video/mp4">
-      </video>
+      <p>ML-based detection using Random Forest, KNN and SVM.</p>
     </div>
   </section>
 
-  <!-- Resume Section -->
+  <!-- RESUME -->
   <section id="resume">
     <h2>Resume</h2>
-    <a href="resume.pdf" download>Download My Resume (PDF)</a>
+    <a href="resume.pdf" download>Download My Resume</a>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:pavithrac.offl@gmail.com">pavithrac.offl@gmail.com</a></p>
@@ -105,6 +97,7 @@
     <p>&copy; 2025 Pavithra C. All rights reserved.</p>
   </footer>
 
+  <!-- JS -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
