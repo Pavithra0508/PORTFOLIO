@@ -1,189 +1,191 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* ================= BODY ================= */
+/* BODY */
 body {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
-  color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR ================= */
-.navbar {
-  width: 100%;
-  background: #1f1f1f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  position: relative;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav-links a:hover {
-  color: #00bcd4;
-}
-
-/* ================= HERO ================= */
+/* NAVBAR */
 header {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: rgba(0,0,0,0.4);
+    background: #111;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* ================= SECTIONS ================= */
+/* LOGO NAME */
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #4c6ef5;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* SECTION GENERAL */
 section {
-  padding: 3rem 1rem;
-  text-align: center;
+    padding: 80px 20px;
+    text-align: center;
 }
 
-h2 {
-  margin-bottom: 2rem;
+/* ABOUT SECTION */
+.about {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
 }
 
-/* ================= ABOUT ================= */
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* PROFILE IMAGE CONTAINER */
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 30px auto;
+    border: 5px solid white;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-content img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  margin-bottom: 1.5rem;
+/* PROFILE IMAGE */
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* FULL IMAGE visible */
 }
 
-.about-content p {
-  max-width: 95%;
+/* SKILLS */
+.skills ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* ================= SKILLS ================= */
-#skills ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
+.skills li {
+    margin: 10px 0;
 }
 
-#skills li {
-  background: #00bcd4;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+/* PROJECTS */
+.projects .project-card {
+    background: #f4f4f4;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
 }
 
-/* ================= PROJECT ================= */
-.project {
-  background: white;
-  color: #333;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
+/* RESUME */
+.resume a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4e54c8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.project-video {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 1rem;
+.resume a:hover {
+    background: #3b40a4;
 }
 
-/* ================= RESUME ================= */
-#resume a {
-  display: inline-block;
-  background: #00bcd4;
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
+/* CONTACT */
+.contact p {
+    margin: 10px 0;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
-  background: #1f1f1f;
-  padding: 1rem;
-  text-align: center;
+    background: #111;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
 
-/* ================= MOBILE ================= */
+/* ========================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ========================= */
+
 @media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block;
-  }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #1f1f1f;
-    flex-direction: column;
-    width: 220px;
-    padding: 1rem 0;
-    border-radius: 10px;
-    display: none;
-  }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
 
-  .nav-links li {
-    text-align: center;
-    padding: 0.5rem 0;
-  }
+    .hero h1 {
+        font-size: 32px;
+    }
 
-  .nav-links.active {
-    display: flex;
-  }
+    .hero p {
+        font-size: 16px;
+    }
 
-}
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
 
-/* ================= DESKTOP ================= */
-@media (min-width: 769px) {
-
-  section {
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  header h1 {
-    font-size: 3rem;
-  }
-
+    .projects .project-card {
+        width: 95%;
+    }
 }
