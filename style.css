@@ -1,34 +1,47 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ================= BODY ================= */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
 }
 
 /* ================= NAVBAR ================= */
-
 .navbar {
+  width: 100%;
+  background: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  padding: 15px 40px;
-  position: fixed;
-  width: 100%;
+  padding: 15px 20px;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  color: white;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
 }
 
 .nav-links {
@@ -37,103 +50,92 @@ body {
   gap: 25px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #8f94fb;
-}
-
-/* HAMBURGER (hidden on desktop) */
-.menu-toggle {
-  display: none;
-  font-size: 25px;
-  color: white;
-  cursor: pointer;
+.nav-links a:hover {
+  color: #00e5ff;
 }
 
 /* ================= HERO ================= */
-
 header {
-  height: 100vh;
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 80px;
   text-align: center;
+  padding: 80px 20px;
+  background: rgba(0,0,0,0.35);
 }
 
 header h1 {
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 15px;
 }
 
 header p {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 /* ================= SECTIONS ================= */
-
 section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
+  width: 100%;
 }
 
-#about {
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
-  color: white;
+h2 {
+  margin-bottom: 30px;
 }
 
-/* ABOUT CONTENT */
+/* ================= ABOUT ================= */
 .about-content {
-  max-width: 800px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 🔥 PROFILE IMAGE FIXED HERE */
 .about-content img {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  object-fit: cover;  /* Try cover first */
+  object-fit: contain;   /* FULL IMAGE visible */
+  background: white;
   display: block;
   margin: 30px auto;
   border: 5px solid white;
 }
 
-/* ABOUT TEXT */
 .about-content p {
+  max-width: 700px;
   margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 /* ================= SKILLS ================= */
-
 #skills ul {
   list-style: none;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 #skills li {
-  margin: 8px 0;
+  background: #00bcd4;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
-/* ================= PROJECTS ================= */
-
+/* ================= PROJECT ================= */
 .project {
-  background: #f4f4f4;
-  padding: 20px;
+  background: white;
+  color: #333;
+  padding: 25px;
+  border-radius: 12px;
   margin: 20px auto;
   max-width: 800px;
-  border-radius: 8px;
 }
 
 .project-video {
@@ -143,49 +145,48 @@ section {
 }
 
 /* ================= RESUME ================= */
-
 #resume a {
   display: inline-block;
+  background: #00bcd4;
   padding: 10px 20px;
-  background: #4e54c8;
-  color: white;
-  text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
-}
-
-#resume a:hover {
-  background: #3b40a4;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
 }
 
 /* ================= CONTACT ================= */
+#contact p {
+  margin-bottom: 10px;
+}
 
 #contact a {
-  color: #4e54c8;
+  color: #fff;
   text-decoration: none;
 }
 
 /* ================= FOOTER ================= */
-
 footer {
-  background: #111;
-  color: white;
-  padding: 15px;
-  text-align: center;
+  background: #1f1f1f;
+  padding: 20px;
+  font-size: 0.9rem;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
-
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
 
   .nav-links {
     position: absolute;
+    top: 65px;
     right: 0;
-    top: 60px;
-    background: #111;
+    background: #1f1f1f;
+    width: 100%;
     flex-direction: column;
-    width: 200px;
-    text-align: center;
+    align-items: center;
     display: none;
     padding: 20px 0;
   }
@@ -194,16 +195,16 @@ footer {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
+  .nav-links li {
+    margin: 10px 0;
   }
 
   header h1 {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   header p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .about-content img {
