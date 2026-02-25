@@ -7,12 +7,11 @@
 
 html, body {
   width: 100%;
-  max-width: 100%;
   overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ================= BODY BACKGROUND ================= */
+/* ================= BODY ================= */
 body {
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: white;
@@ -23,40 +22,36 @@ body {
   width: 100%;
   background: #1f1f1f;
   display: flex;
-  flex-direction: column;   /* 🔥 MOBILE FIRST */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  text-align: center;
+  padding: 1rem;
+  position: relative;
 }
 
-.navbar h1 {
+.logo {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
-  white-space: nowrap;   /* prevents awkward break */
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: column;   /* 🔥 STACK ON MOBILE */
-  gap: 1rem;
-  width: 100%;
-}
-
-.nav-links li {
-  width: 100%;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  display: block;
-  width: 100%;
-  padding: 0.3rem 0;
+  text-decoration: none;
   color: white;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #00e5ff;
+  color: #00bcd4;
 }
 
 /* ================= HERO ================= */
@@ -71,14 +66,9 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-header p {
-  font-size: 1rem;
-}
-
 /* ================= SECTIONS ================= */
 section {
   padding: 3rem 1rem;
-  width: 100%;
   text-align: center;
 }
 
@@ -133,8 +123,8 @@ h2 {
 
 .project-video {
   width: 100%;
-  margin-top: 1rem;
   border-radius: 8px;
+  margin-top: 1rem;
 }
 
 /* ================= RESUME ================= */
@@ -143,36 +133,49 @@ h2 {
   background: #00bcd4;
   padding: 0.6rem 1.5rem;
   border-radius: 5px;
-  margin-top: 1rem;
   color: white;
-}
-
-/* ================= CONTACT ================= */
-#contact p {
-  margin-bottom: 0.8rem;
+  text-decoration: none;
 }
 
 /* ================= FOOTER ================= */
 footer {
   background: #1f1f1f;
   padding: 1rem;
-  font-size: 0.9rem;
+  text-align: center;
 }
 
-/* ================= DESKTOP ================= */
-@media (min-width: 768px) {
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
 
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-links {
-    flex-direction: row;
-    width: auto;
-    gap: 1.5rem;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #1f1f1f;
+    flex-direction: column;
+    width: 220px;
+    padding: 1rem 0;
+    border-radius: 10px;
+    display: none;
   }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 769px) {
 
   section {
     max-width: 1000px;
@@ -183,12 +186,4 @@ footer {
     font-size: 3rem;
   }
 
-  header p {
-    font-size: 1.2rem;
-  }
-
-  .about-content img {
-    width: 250px;
-    height: 250px;
-  }
 }
