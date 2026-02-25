@@ -82,7 +82,7 @@ a {
    FORCE ALL HEADINGS WHITE
 ===================== */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--text-light) !important; /* 🔥 Force white everywhere */
+    color: var(--text-light);
     text-align: center; /* Center all headings */
 }
 
@@ -171,7 +171,7 @@ section p {
 }
 
 .project h3 {
-  color: #000
+  color: #000 !important;
 }
 
 .project p {
