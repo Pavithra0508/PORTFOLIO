@@ -1,172 +1,230 @@
-/* ================= RESET ================= */
+/* =====================
+   CSS VARIABLES
+===================== */
+:root {
+  --primary-color: #00bcd4;
+  --secondary-color: #222;
+  --text-light: #ffffff;
+  --text-dark: #333;
+  --card-bg: #ffffff;
+}
+
+/* =====================
+   GLOBAL STYLES
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
 
-/* ================= ANIMATED BACKGROUND ================= */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #6a00ff, #3a0ca3, #7209b7, #4361ee);
+  /* ✅ YOUR ORIGINAL ANIMATED GRADIENT */
+  background: linear-gradient(-45deg, #00bcd4, #ff4081, #3f51b5, #4caf50);
   background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-  z-index: -1;
+  animation: gradientBG 12s ease infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ================= NAVBAR (DESKTOP GOOD) ================= */
+a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* =====================
+   NAVBAR
+===================== */
 .navbar {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+  gap: 1.5rem;
 }
 
 .nav-links a:hover {
-  color: #00ffff;
+  color: var(--primary-color);
 }
 
-/* Hide hamburger on desktop */
+/* ✅ HAMBURGER (hidden on desktop) */
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* ================= HERO ================= */
+/* =====================
+   HERO SECTION
+===================== */
 header {
+  color: var(--text-light);
   text-align: center;
-  padding: 120px 20px;
+  padding: 6rem 2rem;
+  background: rgba(0,0,0,0.45);
 }
 
 header h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 3rem;
 }
 
 header p {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
-/* ================= SECTIONS ================= */
+/* =====================
+   SECTIONS
+===================== */
 section {
-  padding: 80px 20px;
-  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 h2 {
-  margin-bottom: 40px;
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
 }
 
-/* ================= ABOUT ================= */
+/* =====================
+   ABOUT SECTION
+===================== */
 .about-content {
   display: flex;
-  justify-content: center;
+  gap: 2rem;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .about-content img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
+  object-fit: cover;   /* keeps face inside */
+  border: 4px solid white;
 }
 
 .about-content p {
-  max-width: 500px;
-  line-height: 1.6;
+  color: var(--text-light);
+  max-width: 700px;
 }
 
-/* ================= SKILLS ================= */
+/* =====================
+   SKILLS SECTION
+===================== */
 #skills ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 1rem;
 }
 
 #skills li {
-  background: rgba(255,255,255,0.2);
-  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
   border-radius: 20px;
+  font-weight: 500;
 }
 
-/* ================= PROJECTS ================= */
+/* =====================
+   PROJECTS SECTION
+===================== */
 .project {
-  max-width: 600px;
-  margin: 40px auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  color: var(--text-dark);
+}
+
+.project p {
+  color: #555;
 }
 
 .project-video {
   width: 100%;
-  border-radius: 12px;
+  max-width: 500px;
+  margin-top: 1rem;
+  border-radius: 8px;
 }
 
-/* ================= RESUME ================= */
+/* =====================
+   RESUME SECTION
+===================== */
+#resume {
+  text-align: center;
+}
+
 #resume a {
+  background: var(--primary-color);
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
   display: inline-block;
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: 0.3s;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
 }
 
 #resume a:hover {
-  background: #00ffff;
+  background: #0097a7;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  padding: 20px;
+/* =====================
+   CONTACT SECTION
+===================== */
+#contact p {
   text-align: center;
-  background: rgba(0,0,0,0.4);
+  color: var(--text-light);
+  margin-bottom: 1rem;
 }
 
-/* ================= MOBILE FIX ONLY ================= */
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: var(--secondary-color);
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* =====================
+   MOBILE FIX ONLY
+===================== */
 @media (max-width: 768px) {
 
   /* Show hamburger */
@@ -174,40 +232,33 @@ footer {
     display: block;
   }
 
-  /* Hide nav links initially */
+  /* Hide nav links */
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 65px;
     right: 20px;
-    width: 200px;
-    background: rgba(0,0,0,0.95);
+    background: var(--secondary-color);
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
     display: none;
   }
 
-  /* When active */
   .nav-links.active {
     display: flex;
   }
 
   header h1 {
-    font-size: 28px;
+    font-size: 2rem;
   }
 
   header p {
-    font-size: 16px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: 20px;
+    font-size: 1rem;
   }
 
   .about-content img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 }
