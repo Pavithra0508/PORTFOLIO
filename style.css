@@ -171,7 +171,7 @@ section p {
 }
 
 .project h3 {
-  color: var(--text-light) !important; /* White heading even on white card */
+  color: #000
 }
 
 .project p {
