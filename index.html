@@ -12,7 +12,12 @@
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">Pavithra C</div>
-    <ul class="nav-links">
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -86,9 +91,7 @@
   <!-- Resume Section -->
   <section id="resume">
     <h2>Resume</h2>
-    <p>
-      <a href="resume.pdf" download>Download My Resume (PDF)</a>
-    </p>
+    <a href="resume.pdf" download>Download My Resume (PDF)</a>
   </section>
 
   <!-- Contact Section -->
@@ -98,10 +101,18 @@
     <p>Phone: 9176345297</p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Pavithra C. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
