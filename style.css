@@ -79,11 +79,11 @@ a {
 }
 
 /* =====================
-   HEADINGS - FORCE WHITE
+   FORCE ALL HEADINGS WHITE
 ===================== */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-light) !important;
-  text-align: center; /* Center all headings */
+    color: var(--text-light) !important; /* 🔥 Force white everywhere */
+    text-align: center; /* Center all headings */
 }
 
 /* =====================
@@ -171,7 +171,7 @@ section p {
 }
 
 .project h3 {
-  color: var(--text-light) !important; /* White heading */
+  color: var(--text-light) !important; /* White heading even on white card */
 }
 
 .project p {
