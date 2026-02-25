@@ -10,7 +10,7 @@
 }
 
 /* =====================
-   GLOBAL
+   RESET
 ===================== */
 * {
   margin: 0;
@@ -18,18 +18,21 @@
   box-sizing: border-box;
 }
 
+/* =====================
+   ANIMATED GRADIENT BACKGROUND
+===================== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: var(--text-dark);
   overflow-x: hidden;
+  color: var(--text-dark);
 
-  background: linear-gradient(-45deg, #00bcd4, #ff4081, #3f51b5, #4caf50);
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #8e2de2, #4a00e0);
   background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
+  animation: gradientMove 12s ease infinite;
 }
 
-@keyframes gradientBG {
+@keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -44,7 +47,7 @@ a {
    NAVBAR
 ===================== */
 .navbar {
-  background-color: var(--secondary-color);
+  background: rgba(0,0,0,0.8);
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -80,10 +83,10 @@ a {
    HERO
 ===================== */
 header {
-  color: white;
   text-align: center;
   padding: 6rem 2rem;
   background: rgba(0,0,0,0.45);
+  color: white;
 }
 
 header h1 {
@@ -124,7 +127,7 @@ h2 {
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 20%;  /* 🔥 FIX: face centered */
+  object-position: center 20%;
   border: 5px solid white;
   margin-bottom: 1.5rem;
 }
@@ -163,15 +166,19 @@ h2 {
   text-align: center;
 }
 
-.project h3,
-.project p {
+.project h3 {
   color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.project p {
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .project-video {
   width: 100%;
   max-width: 500px;
-  margin-top: 1rem;
   border-radius: 8px;
 }
 
@@ -203,14 +210,14 @@ h2 {
    FOOTER
 ===================== */
 footer {
-  background: var(--secondary-color);
+  background: rgba(0,0,0,0.8);
   color: #aaa;
   text-align: center;
   padding: 1rem;
 }
 
 /* =====================
-   MOBILE FIX
+   MOBILE
 ===================== */
 @media (max-width: 768px) {
 
@@ -224,7 +231,7 @@ footer {
     right: 0;
     background: #222;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     display: none;
     padding: 1rem;
     border-radius: 8px 0 0 8px;
