@@ -79,10 +79,11 @@ a {
 }
 
 /* =====================
-   HEADINGS - ALL WHITE
+   HEADINGS - FORCE WHITE
 ===================== */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-light);
+  color: var(--text-light) !important;
+  text-align: center; /* Center all headings */
 }
 
 /* =====================
@@ -97,7 +98,7 @@ header {
 
 header h1,
 header p {
-  text-align: center; /* 🔥 Force center */
+  text-align: center;
 }
 
 header p {
@@ -110,7 +111,7 @@ header p {
 ===================== */
 section {
   padding: 4rem 2rem;
-  text-align: center;  /* 🔥 Force center */
+  text-align: center;
 }
 
 section p {
@@ -124,7 +125,7 @@ section p {
 .about-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 🔥 Center content */
+  align-items: center;
   gap: 2rem;
 }
 
@@ -163,14 +164,14 @@ section p {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
-  margin: 0 auto 2rem auto; /* 🔥 Center card */
+  margin: 0 auto 2rem auto;
   max-width: 700px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .project h3 {
-  color: var(--text-light); /* Updated to white */
+  color: var(--text-light) !important; /* White heading */
 }
 
 .project p {
@@ -207,7 +208,7 @@ section p {
    CONTACT SECTION
 ===================== */
 #contact {
-  text-align: center; /* 🔥 Force center */
+  text-align: center;
 }
 
 #contact p {
@@ -222,7 +223,7 @@ footer {
   background: var(--secondary-color);
   color: #aaa;
   padding: 1rem;
-  text-align: center; /* 🔥 Force center */
+  text-align: center;
 }
 
 /* =====================
