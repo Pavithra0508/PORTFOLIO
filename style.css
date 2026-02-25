@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,54 +6,46 @@
 }
 
 html, body {
-  width: 100%;
   overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
 }
 
-/* ================= BODY ================= */
+/* BACKGROUND GRADIENT */
 body {
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: white;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
-  width: 100%;
   background: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 1.5rem;
+  position: relative;
 }
 
 .logo {
-  font-size: 1.3rem;
   font-weight: bold;
-  white-space: nowrap;
+  font-size: 1.2rem;
 }
 
 .menu-toggle {
-  display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: white;
+  display: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: white;
-  font-size: 0.95rem;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -61,118 +53,103 @@ body {
   color: #00e5ff;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 header {
   text-align: center;
-  padding: 80px 20px;
-  background: rgba(0,0,0,0.35);
+  padding: 5rem 1rem;
+  background: rgba(0,0,0,0.3);
 }
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
 }
 
 header p {
+  margin-top: 1rem;
   font-size: 1.2rem;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 section {
-  padding: 60px 20px;
+  padding: 4rem 1rem;
   text-align: center;
-  width: 100%;
 }
 
 h2 {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-content img {
+.image-wrapper {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  object-fit: contain;   /* FULL IMAGE visible */
-  background: white;
-  display: block;
-  margin: 30px auto;
+  overflow: hidden;
   border: 5px solid white;
+  margin-bottom: 1.5rem;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* FACE centered properly */
 }
 
 .about-content p {
   max-width: 700px;
-  margin-top: 20px;
-  line-height: 1.6;
 }
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 #skills ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 0.8rem;
 }
 
 #skills li {
   background: #00bcd4;
-  padding: 8px 15px;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
-/* ================= PROJECT ================= */
+/* PROJECT */
 .project {
   background: white;
   color: #333;
-  padding: 25px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 800px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
 }
 
-.project-video {
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 8px;
-}
-
-/* ================= RESUME ================= */
+/* RESUME */
 #resume a {
   display: inline-block;
   background: #00bcd4;
-  padding: 10px 20px;
+  padding: 0.6rem 1.5rem;
   border-radius: 5px;
-  margin-top: 15px;
-  text-decoration: none;
   color: white;
-}
-
-/* ================= CONTACT ================= */
-#contact p {
-  margin-bottom: 10px;
-}
-
-#contact a {
-  color: #fff;
   text-decoration: none;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   background: #1f1f1f;
-  padding: 20px;
+  padding: 1rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -181,14 +158,13 @@ footer {
 
   .nav-links {
     position: absolute;
-    top: 65px;
+    top: 100%;
     right: 0;
     background: #1f1f1f;
-    width: 100%;
     flex-direction: column;
-    align-items: center;
+    width: 200px;
     display: none;
-    padding: 20px 0;
+    padding: 1rem 0;
   }
 
   .nav-links.active {
@@ -196,18 +172,14 @@ footer {
   }
 
   .nav-links li {
-    margin: 10px 0;
+    padding: 0.8rem 1rem;
   }
 
   header h1 {
     font-size: 2rem;
   }
 
-  header p {
-    font-size: 1rem;
-  }
-
-  .about-content img {
+  .image-wrapper {
     width: 200px;
     height: 200px;
   }
