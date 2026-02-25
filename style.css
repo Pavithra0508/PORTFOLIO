@@ -80,16 +80,10 @@ a {
    HERO SECTION
 ===================== */
 header {
-  min-height: 60vh;
-  color: var(--text-light);
-  background: rgba(0, 0, 0, 0.45);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  /* 🔥 Perfect center */
+  padding: 6rem 2rem;
+  background: rgba(0,0,0,0.45);
   text-align: center;
-  padding: 2rem;
+  color: var(--text-light);
 }
 
 header h1 {
@@ -98,7 +92,8 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
+  max-width: 700px;
 }
 
 /* =====================
@@ -107,12 +102,8 @@ header p {
 section {
   padding: 4rem 1.5rem;
   max-width: 1000px;
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 🔥 Center everything */
-  text-align: center;
+  margin: 0 auto;     /* 🔥 Proper horizontal center */
+  text-align: center; /* 🔥 Center text */
 }
 
 h2 {
@@ -123,7 +114,7 @@ h2 {
 section p {
   color: var(--text-light);
   max-width: 700px;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto; /* 🔥 Center paragraph */
 }
 
 /* =====================
@@ -173,8 +164,7 @@ section p {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
-  margin-bottom: 2rem;
-  width: 100%;
+  margin: 0 auto 2rem auto;  /* 🔥 Center project card */
   max-width: 700px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -214,14 +204,12 @@ section p {
    CONTACT SECTION
 ===================== */
 #contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* 🔥 Perfect center */
-  justify-content: center;
+  text-align: center;
 }
 
 #contact p {
-  margin: 0.6rem 0;
+  margin: 0.6rem auto;
+  max-width: 600px;
   color: var(--text-light);
 }
 
