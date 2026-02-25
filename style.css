@@ -1,54 +1,38 @@
-/* =====================
-   CSS VARIABLES
-===================== */
-:root {
-  --primary-color: #00bcd4;
-  --secondary-color: #222;
-  --text-light: #ffffff;
-  --text-dark: #333;
-  --card-bg: #ffffff;
-}
-
-/* =====================
-   RESET
-===================== */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =====================
-   ANIMATED GRADIENT BACKGROUND
-===================== */
+/* ================= ANIMATED MOVING BACKGROUND ================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  color: var(--text-dark);
+  color: #333;
 
   background: linear-gradient(-45deg, #6a11cb, #2575fc, #8e2de2, #4a00e0);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientShift {
   0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
   50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
   100% { background-position: 0% 50%; }
 }
 
 a {
-  color: var(--text-light);
+  color: white;
   text-decoration: none;
 }
 
-/* =====================
-   NAVBAR
-===================== */
+/* ================= NAVBAR ================= */
 .navbar {
-  background: rgba(0,0,0,0.8);
-  color: white;
+  background: rgba(0,0,0,0.75);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -59,6 +43,7 @@ a {
 }
 
 .logo {
+  color: white;
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -66,6 +51,7 @@ a {
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
+  color: white;
   cursor: pointer;
 }
 
@@ -76,12 +62,10 @@ a {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: #00e5ff;
 }
 
-/* =====================
-   HERO
-===================== */
+/* ================= HERO ================= */
 header {
   text-align: center;
   padding: 6rem 2rem;
@@ -97,9 +81,7 @@ header p {
   font-size: 1.2rem;
 }
 
-/* =====================
-   SECTIONS
-===================== */
+/* ================= SECTIONS ================= */
 section {
   padding: 4rem 1.5rem;
   max-width: 1000px;
@@ -112,9 +94,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* =====================
-   ABOUT
-===================== */
+/* ================= ABOUT ================= */
 .about-content {
   display: flex;
   flex-direction: column;
@@ -137,9 +117,7 @@ h2 {
   max-width: 700px;
 }
 
-/* =====================
-   SKILLS
-===================== */
+/* ================= SKILLS ================= */
 #skills ul {
   list-style: none;
   display: flex;
@@ -149,15 +127,13 @@ h2 {
 }
 
 #skills li {
-  background: var(--primary-color);
+  background: #00bcd4;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
 }
 
-/* =====================
-   PROJECTS
-===================== */
+/* ================= PROJECTS ================= */
 .project {
   background: white;
   padding: 2rem;
@@ -167,13 +143,12 @@ h2 {
 }
 
 .project h3 {
-  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .project p {
-  color: #555;
   margin-bottom: 1rem;
+  color: #555;
 }
 
 .project-video {
@@ -182,43 +157,36 @@ h2 {
   border-radius: 8px;
 }
 
-/* =====================
-   RESUME
-===================== */
+/* ================= RESUME ================= */
 #resume {
   text-align: center;
 }
 
 #resume a {
-  background: var(--primary-color);
+  background: #00bcd4;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
   display: inline-block;
   margin-top: 1rem;
+  color: white;
 }
 
-/* =====================
-   CONTACT
-===================== */
+/* ================= CONTACT ================= */
 #contact p {
   text-align: center;
   color: white;
   margin-bottom: 1rem;
 }
 
-/* =====================
-   FOOTER
-===================== */
+/* ================= FOOTER ================= */
 footer {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.75);
   color: #aaa;
   text-align: center;
   padding: 1rem;
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .menu-toggle {
