@@ -25,7 +25,6 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 
-  /* 🔥 Animated Gradient Background (Same as yours) */
   background: linear-gradient(-45deg, #00bcd4, #ff4081, #3f51b5, #4caf50);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
@@ -72,7 +71,6 @@ a {
   color: var(--primary-color);
 }
 
-/* Hide hamburger on desktop */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -95,6 +93,8 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
+  margin: 1rem auto 0;
+  max-width: 700px;
 }
 
 /* =====================
@@ -104,12 +104,18 @@ section {
   padding: 4rem 1.5rem;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
 }
 
 h2 {
-  text-align: center;
   color: var(--text-light);
   margin-bottom: 2rem;
+}
+
+section p {
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* =====================
@@ -121,20 +127,16 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
 }
+
 .about-content img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  object-fit: contain;      /* ✅ shows full image */
-  object-position: center;  /* ✅ keeps it centered */
-  background-color: white;  /* ✅ fills empty sides */
+  object-fit: contain;
+  object-position: center;
+  background-color: white;
   border: 4px solid white;
-}
-p {
-  color: var(--text-light);
-  max-width: 700px;
 }
 
 /* =====================
@@ -170,6 +172,7 @@ p {
 
 .project h3 {
   color: var(--text-dark);
+  margin-bottom: 1rem;
 }
 
 .project p {
@@ -186,10 +189,6 @@ p {
 /* =====================
    RESUME SECTION
 ===================== */
-#resume {
-  text-align: center;
-}
-
 #resume a {
   background: var(--primary-color);
   padding: 0.7rem 1.5rem;
@@ -206,10 +205,13 @@ p {
 /* =====================
    CONTACT SECTION
 ===================== */
-#contact p {
+#contact {
   text-align: center;
+}
+
+#contact p {
+  margin: 0.5rem 0;
   color: var(--text-light);
-  margin-bottom: 1rem;
 }
 
 /* =====================
@@ -227,12 +229,10 @@ footer {
 ===================== */
 @media (max-width: 768px) {
 
-  /* Show hamburger */
   .menu-toggle {
     display: block;
   }
 
-  /* Hide links initially */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -244,7 +244,6 @@ footer {
     padding: 1rem 0;
   }
 
-  /* When active (JS toggles this) */
   .nav-links.active {
     display: flex;
   }
