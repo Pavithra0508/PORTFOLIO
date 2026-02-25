@@ -128,8 +128,8 @@ h2 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 40%;  /* 👈 pushes image downward */
+  object-fit: contain;   /* 👈 removes zoom cropping */
+  background-color: white; /* fills empty space */
   border: 4px solid white;
 }
 
